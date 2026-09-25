@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="SBMS RIDES - Bike rentals in Srisailam. Explore Srisailam on your own ride.">
+<title>SBMS RIDES | Bike Rentals in Srisailam</title>
+<style>
+:root{--dark:#07131c;--dark2:#0d202c;--gold:#ffc928;--white:#fff;--muted:#68737d;--light:#f5f7f8;--green:#18b957}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;color:#111;background:var(--light);line-height:1.5}
+a{text-decoration:none;color:inherit}
+header{position:sticky;top:0;z-index:20;background:rgba(7,19,28,.97);color:#fff;box-shadow:0 3px 18px #0002}
+.nav{max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:14px 20px}
+.logo{font-weight:900;font-size:22px;letter-spacing:1px}.logo span{color:var(--gold)}
+.logo small{display:block;font-size:9px;letter-spacing:3px;color:#ccd3d7}
+nav{display:flex;gap:22px;font-size:14px;font-weight:700}
+nav a:hover{color:var(--gold)}
+.menu{display:none;font-size:25px}
+.hero{min-height:570px;background:
+linear-gradient(90deg,rgba(3,12,18,.88),rgba(3,12,18,.48),rgba(3,12,18,.2)),
+url("https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1800&q=85") center/cover;
+display:flex;align-items:center;color:#fff}
+.hero-inner{max-width:1200px;width:100%;margin:auto;padding:70px 20px}
+.kicker{color:var(--gold);font-weight:800;letter-spacing:2px;text-transform:uppercase}
+h1{font-size:clamp(42px,7vw,78px);line-height:.98;margin:12px 0 20px;max-width:800px}
+.hero p{font-size:20px;max-width:650px;color:#eef2f4}
+.buttons{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}
+.btn{padding:14px 22px;border-radius:10px;font-weight:800;display:inline-block}
+.btn.gold{background:var(--gold);color:#111}.btn.green{background:var(--green);color:#fff}.btn.outline{border:2px solid #fff;color:#fff}
+.section{max-width:1200px;margin:auto;padding:70px 20px}
+.title{text-align:center;margin-bottom:36px}.title h2{font-size:38px}.title span{color:#e5ad00}.title p{color:var(--muted);margin-top:7px}
+.benefits{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:-35px;position:relative}
+.benefit{background:#fff;padding:25px;border-radius:15px;box-shadow:0 8px 30px #00000010;text-align:center}
+.benefit b{display:block;margin:7px 0}.benefit p{font-size:13px;color:var(--muted)}
+.bikes{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.card{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 8px 28px #00000012}
+.card img{width:100%;height:205px;object-fit:cover;background:#eef1f2}
+.card-body{padding:20px}.card h3{font-size:21px}.price{font-size:25px;font-weight:900;margin:8px 0}.price small{font-size:13px;color:var(--muted);font-weight:600}
+.price-row{display:flex;gap:15px;flex-wrap:wrap}.price-row div{background:#fff7d1;border-radius:8px;padding:6px 9px;font-weight:800;font-size:13px}
+.card ul{list-style:none;color:var(--muted);font-size:13px;margin:12px 0 18px}.card li{margin:5px 0}.card li::before{content:"✓";color:#15964a;font-weight:900;margin-right:7px}
+.fullbtn{display:block;text-align:center;background:var(--gold);padding:11px;border-radius:9px;font-weight:900}
+.places{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.place{min-height:190px;border-radius:16px;padding:24px;color:#fff;display:flex;align-items:end;background:linear-gradient(0deg,#000b,#0001),url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80") center/cover}
+.place:nth-child(2){background-image:linear-gradient(0deg,#000b,#0001),url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=900&q=80")}
+.place:nth-child(3){background-image:linear-gradient(0deg,#000b,#0001),url("https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=900&q=80")}
+.place:nth-child(4){background-image:linear-gradient(0deg,#000b,#0001),url("https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=900&q=80")}
+.place:nth-child(5){background-image:linear-gradient(0deg,#000b,#0001),url("https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=900&q=80")}
+.place:nth-child(6){background-image:linear-gradient(0deg,#000b,#0001),url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=80")}
+.place h3{font-size:21px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.step{background:#fff;padding:25px;border-radius:15px;text-align:center}.num{font-size:32px;font-weight:900;color:#d9a900}
+.contact{background:var(--dark);color:#fff}.contact .section{padding-bottom:45px}.contact-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:30px}.contact h2{font-size:34px;margin-bottom:12px}.contact p,.contact li{color:#cbd4d9}.contact ul{list-style:none}.contact li{margin:9px 0}
+.map{min-height:190px;border-radius:15px;background:linear-gradient(135deg,#243a45,#10232d);display:flex;align-items:center;justify-content:center;text-align:center;padding:20px}
+footer{background:#041018;color:#9eabb2;text-align:center;padding:18px;font-size:12px}
+@media(max-width:900px){nav{display:none}.menu{display:block}.bikes{grid-template-columns:repeat(2,1fr)}.benefits,.steps{grid-template-columns:repeat(2,1fr)}.places{grid-template-columns:repeat(2,1fr)}.contact-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.hero{min-height:610px}.bikes,.benefits,.steps,.places,.contact-grid{grid-template-columns:1fr}.section{padding:55px 16px}.benefits{margin-top:-25px}.card img{height:220px}}
+</style>
+</head>
+<body>
+<header>
+<div class="nav">
+<a class="logo" href="#home">SBMS <span>RIDES</span><small>BIKE RENTALS • SRISAILAM</small></a>
+<nav><a href="#home">Home</a><a href="#bikes">Bikes</a><a href="#pricing">Pricing</a><a href="#places">Places</a><a href="#how">How It Works</a><a href="#contact">Contact</a></nav>
+<div class="menu">☰</div>
+</div>
+</header>
+
+<section class="hero" id="home">
+<div class="hero-inner">
+<div class="kicker">Bike Rentals • Srisailam</div>
+<h1>Explore Srisailam<br><span style="color:var(--gold)">on Your Own Ride.</span></h1>
+<p>Reliable bikes for pilgrims, tourists and travellers who want the freedom to explore Srisailam at their own pace.</p>
+<div class="buttons">
+<a class="btn gold" href="#bikes">🏍️ View Bikes</a>
+<a class="btn green" href="https://wa.me/917993534177?text=Hello%20SBMS%20RIDES%2C%20I%20want%20to%20book%20a%20bike." target="_blank">💬 Book on WhatsApp</a>
+</div>
+</div>
+</section>
+
+<section class="section" style="padding-top:0">
+<div class="benefits">
+<div class="benefit">🏍️<b>Quality Bikes</b><p>Choose from our rental fleet.</p></div>
+<div class="benefit">🛠️<b>Maintained</b><p>Bikes checked before pickup.</p></div>
+<div class="benefit">🪖<b>Helmet</b><p>Helmet availability as per rental terms.</p></div>
+<div class="benefit">📍<b>Srisailam Pickup</b><p>Convenient local pickup point.</p></div>
+</div>
+</section>
+
+<section class="section" id="bikes">
+<div class="title"><h2>Our <span>Bikes</span></h2><p>Choose your ride and enjoy Srisailam.</p></div>
+<div class="bikes">
+
+<article class="card">
+<img src="https://img.autocarindia.com/ExtraImages/20180314041646_pax1.jpg" alt="Hero Passion Pro">
+<div class="card-body"><h3>Hero Passion Pro</h3>
+<div class="price-row"><div>12 Hrs ₹479</div><div>24 Hrs ₹799</div></div>
+<ul><li>Comfortable commuter</li><li>Suitable for local exploring</li><li>Helmet subject to rental terms</li></ul>
+<a class="fullbtn" href="https://wa.me/917993534177?text=Hello%20SBMS%20RIDES%2C%20I%20want%20to%20book%20the%20Passion%20Pro." target="_blank">Book Now</a></div>
+</article>
+
+<article class="card">
+<img src="https://images.91wheels.com/assets/b_images/gallery/honda/shine/honda-shine-0-1769513560.png?q=40&w=192" alt="Honda Shine">
+<div class="card-body"><h3>Honda Shine</h3>
+<div class="price-row"><div>12 Hrs ₹539</div><div>24 Hrs ₹899</div></div>
+<ul><li>Comfortable everyday bike</li><li>Great for sightseeing</li><li>Helmet subject to rental terms</li></ul>
+<a class="fullbtn" href="https://wa.me/917993534177?text=Hello%20SBMS%20RIDES%2C%20I%20want%20to%20book%20the%20Honda%20Shine." target="_blank">Book Now</a></div>
+</article>
+
+<article class="card">
+<img src="https://imgd.aeplcdn.com/1056x594/n/cw/ec/50118/maestro-edge-left-front-three-quarter-2.png?isig=0&q=80&wm=3" alt="Hero Maestro Edge">
+<div class="card-body"><h3>Hero Maestro Edge</h3>
+<div class="price-row"><div>12 Hrs ₹539</div><div>24 Hrs ₹899</div></div>
+<ul><li>Easy automatic scooter</li><li>Convenient for sightseeing</li><li>Helmet subject to rental terms</li></ul>
+<a class="fullbtn" href="https://wa.me/917993534177?text=Hello%20SBMS%20RIDES%2C%20I%20want%20to%20book%20the%20Maestro%20Edge." target="_blank">Book Now</a></div>
+</article>
+
+<article class="card">
+<img src="https://www.royalenfield.com/content/dam/royal-enfield/classic-350/gallery/thumbnail/gallery-9.jpg" alt="Royal Enfield Classic 350">
+<div class="card-body"><h3>Royal Enfield Classic 350</h3>
+<div class="price-row"><div>12 Hrs ₹899</div><div>24 Hrs ₹1,499</div></div>
+<ul><li>Premium motorcycle</li><li>Ideal for longer rides</li><li>Helmet subject to rental terms</li></ul>
+<a class="fullbtn" href="https://wa.me/917993534177?text=Hello%20SBMS%20RIDES%2C%20I%20want%20to%20book%20the%20Classic%20350." target="_blank">Book Now</a></div>
+</article>
+
+</div>
+</section>
+
+<section class="section" id="pricing" style="background:#fff">
+<div class="title"><h2>Simple <span>Pricing</span></h2><p>Rental prices currently shown for 12-hour and 24-hour plans.</p></div>
+<div style="max-width:800px;margin:auto;overflow:auto">
+<table style="width:100%;border-collapse:collapse;background:#fff">
+<tr style="background:#07131c;color:#fff"><th style="padding:14px;text-align:left">Bike</th><th>12 Hours</th><th>24 Hours</th></tr>
+<tr><td style="padding:14px">Passion Pro</td><td>₹479</td><td>₹799</td></tr>
+<tr><td style="padding:14px">Honda Shine</td><td>₹539</td><td>₹899</td></tr>
+<tr><td style="padding:14px">Maestro Edge</td><td>₹539</td><td>₹899</td></tr>
+<tr><td style="padding:14px">Classic 350</td><td>₹899</td><td>₹1,499</td></tr>
+</table>
+</div>
+<p style="text-align:center;color:#68737d;margin-top:18px;font-size:13px">Security deposit, fuel policy, late fees and rental conditions should be confirmed at booking.</p>
+</section>
+
+<section class="section" id="places">
+<div class="title"><h2>Explore <span>Srisailam</span></h2><p>Plan your ride around Srisailam's attractions.</p></div>
+<div class="places">
+<div class="place"><h3>Mallikarjuna Swamy Temple</h3></div>
+<div class="place"><h3>Srisailam Dam</h3></div>
+<div class="place"><h3>Pathala Ganga</h3></div>
+<div class="place"><h3>Sikhareswaram</h3></div>
+<div class="place"><h3>Paladhara–Panchadhara</h3></div>
+<div class="place"><h3>Chenchu Lakshmi Tribal Museum</h3></div>
+</div>
+</section>
+
+<section class="section" id="how" style="background:#fff">
+<div class="title"><h2>How It <span>Works</span></h2></div>
+<div class="steps">
+<div class="step"><div class="num">01</div><h3>Choose a Bike</h3><p>Select your preferred ride.</p></div>
+<div class="step"><div class="num">02</div><h3>Book</h3><p>Send your details on WhatsApp.</p></div>
+<div class="step"><div class="num">03</div><h3>Pickup</h3><p>Visit our Srisailam shop.</p></div>
+<div class="step"><div class="num">04</div><h3>Explore</h3><p>Ride responsibly and enjoy.</p></div>
+</div>
+</section>
+
+<section class="contact" id="contact">
+<div class="section">
+<div class="contact-grid">
+<div><h2>SBMS <span style="color:var(--gold)">RIDES</span></h2><p>Ride Srisailam. Explore More.</p><div class="buttons"><a class="btn green" href="https://wa.me/917993534177" target="_blank">WhatsApp</a><a class="btn gold" href="tel:+917993534177">Call Now</a></div></div>
+<div><h3>Contact</h3><ul><li>📞 7993534177</li><li>✉️ shaiksanaulla554@gmail.com</li><li>🕐 12-hour & 24-hour rental plans</li></ul></div>
+<div><h3>Pickup Location</h3><p>Shop No. 14, R Block,<br>Lalithambika Shopping Complex,<br>Srisailam</p><br><a class="btn gold" href="https://www.google.com/maps/search/?api=1&query=Shop+No+14+R+Block+Lalithambika+Shopping+Complex+Srisailam" target="_blank">📍 Open in Google Maps</a></div>
+</div>
+</div>
+</section>
+<footer>© 2026 SBMS RIDES • Bike Rentals, Srisailam</footer>
+</body>
+</html>
