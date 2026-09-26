@@ -365,43 +365,7 @@ function bookRide() {
     );
 }
 </script>
-  <script>
-function bookRide() {
-    const name = document.getElementById("customerName").value.trim();
-    const mobile = document.getElementById("mobile").value.trim();
-    const bike = document.getElementById("bike").value;
-    const date = document.getElementById("pickupDate").value;
-    const time = document.getElementById("pickupTime").value;
-    const location = document.getElementById("pickupLocation").value.trim();
-
-    if (!name || !mobile || !date || !time || !location) {
-        alert("Please fill in all booking details.");
-        return;
-    }
-
-    if (!/^[0-9]{10}$/.test(mobile)) {
-        alert("Please enter a valid 10-digit mobile number.");
-        return;
-    }
-
-    const message =
-        "🏍️ SBMS RIDES - NEW BOOKING%0A%0A" +
-        "👤 Customer: " + encodeURIComponent(name) + "%0A" +
-        "📱 Mobile: " + encodeURIComponent(mobile) + "%0A" +
-        "🏍️ Bike: " + encodeURIComponent(bike) + "%0A" +
-        "📅 Pickup Date: " + encodeURIComponent(date) + "%0A" +
-        "⏰ Pickup Time: " + encodeURIComponent(time) + "%0A" +
-        "📍 Pickup Location: " + encodeURIComponent(location);
-
-    const whatsappNumber = "917XXXXXXXXX";
-
-    window.open(
-        "https://wa.me/" + whatsappNumber + "?text=" + message,
-        "_blank"
-    );
-}
-  </script>
-  <script>
+ <script>
 function bookRide() {
     const name = document.getElementById("customerName").value.trim();
     const mobile = document.getElementById("mobile").value.trim();
