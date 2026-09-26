@@ -387,5 +387,50 @@ function bookRide() {
     );
 }
 </script>
+<script>
+function bookRide() {
+    const name = document.getElementById("customerName").value.trim();
+    const mobile = document.getElementById("mobile").value.trim();
+    const bike = document.getElementById("bike").value;
+    const date = document.getElementById("pickupDate").value;
+    const time = document.getElementById("pickupTime").value;
+    const location = document.getElementById("pickupLocation").value.trim();
+
+    if (name === "") {
+        alert("Please enter your name.");
+        return;
+    }
+
+    if (!/^[0-9]{10}$/.test(mobile)) {
+        alert("Please enter a valid 10-digit mobile number.");
+        return;
+    }
+
+    if (date === "") {
+        alert("Please select pickup date.");
+        return;
+    }
+
+    if (time === "") {
+        alert("Please select pickup time.");
+        return;
+    }
+
+    if (location === "") {
+        alert("Please enter pickup location.");
+        return;
+    }
+
+    alert(
+        "Booking Confirmed!\\n\\n" +
+        "Customer: " + name + "\\n" +
+        "Mobile: " + mobile + "\\n" +
+        "Bike: " + bike + "\\n" +
+        "Date: " + date + "\\n" +
+        "Time: " + time + "\\n" +
+        "Pickup: " + location
+    );
+}
+</script>
 </body>
 </html>
