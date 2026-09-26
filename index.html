@@ -42,44 +42,61 @@ h1{font-size:clamp(42px,7vw,78px);line-height:.98;margin:12px 0 20px;max-width:8
 .price-row{display:flex;gap:15px;flex-wrap:wrap}.price-row div{background:#fff7d1;border-radius:8px;padding:6px 9px;font-weight:800;font-size:13px}
 .card ul{list-style:none;color:var(--muted);font-size:13px;margin:12px 0 18px}.card li{margin:5px 0}.card li::before{content:"✓";color:#15964a;font-weight:900;margin-right:7px}
 .fullbtn{display:block;text-align:center;background:var(--gold);padding:11px;border-radius:9px;font-weight:900}
-  .place{
-  background:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.65)),
-  url("https://images.unsplash.com/photo-1593693411515-c20261bcad6e?auto=format&fit=crop&w=1200&q=80");
-  background-size:cover;
-  background-position:center;
+.place{
+    background-image:
+    linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),
+    url("place1.jpg");
+    background-size:cover;
+    background-position:center;
 }
 
 .place:nth-child(2){
-  background-image:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.65)),
-  url("https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1200&q=80");
+    background-image:
+    linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),
+    url("place2.jpg");
+    background-size:cover;
+    background-position:center;
 }
 
 .place:nth-child(3){
-  background-image:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.65)),
-  url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1200&q=80");
+    background-image:
+    linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),
+    url("place3.jpg");
+    background-size:cover;
+    background-position:center;
 }
 
 .place:nth-child(4){
-  background-image:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.65)),
-  url("https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1200&q=80");
+    background-image:
+    linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),
+    url("place4.jpg");
+    background-size:cover;
+    background-position:center;
 }
 
 .place:nth-child(5){
-  background-image:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.65)),
-  url("https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1200&q=80");
+    background-image:
+    linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),
+    url("place5.jpg");
+    background-size:cover;
+    background-position:center;
 }
 
 .place:nth-child(6){
-  background-image:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.65)),
-  url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80");
+    background-image:
+    linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),
+    url("place6.jpg");
+    background-size:cover;
+    background-position:center;
 }
-  .place:nth-child(7){
-  background-image:
-    linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.65)),
-    url("https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1200&q=80");
-  background-size:cover;
-  background-position:center;
-  }
+
+.place:nth-child(7){
+    background-image:
+    linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),
+    url("place7.jpg");
+    background-size:cover;
+    background-position:center;
+}
 .place h3{font-size:21px}
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.step{background:#fff;padding:25px;border-radius:15px;text-align:center}.num{font-size:32px;font-weight:900;color:#d9a900}
 .contact{background:var(--dark);color:#fff}.contact .section{padding-bottom:45px}.contact-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:30px}.contact h2{font-size:34px;margin-bottom:12px}.contact p,.contact li{color:#cbd4d9}.contact ul{list-style:none}.contact li{margin:9px 0}
@@ -170,6 +187,113 @@ footer{background:#041018;color:#9eabb2;text-align:center;padding:18px;font-size
 </table>
 </div>
 <p style="text-align:center;color:#68737d;margin-top:18px;font-size:13px">Security deposit, fuel policy, late fees and rental conditions should be confirmed at booking.</p>
+  <div style="max-width:800px;margin:35px auto;background:#fff;padding:25px;border-radius:18px;box-shadow:0 5px 20px rgba(0,0,0,.12);">
+
+<h2 style="text-align:center;margin-bottom:20px;">
+Book Your Ride
+</h2>
+
+<label><b>Customer Name</b></label>
+<input type="text" id="customerName"
+placeholder="Enter your name"
+style="width:100%;padding:13px;margin:8px 0 18px;border-radius:8px;border:1px solid #ccc;">
+
+<label><b>Mobile Number</b></label>
+    <label><b>Select Bike</b></label>
+<select id="bike"
+style="width:100%;padding:13px;margin:8px 0 18px;border-radius:8px;">
+<option>Passion Pro</option>
+<option>Honda Shine</option>
+<option>Maestro Edge</option>
+<option>Classic 350</option>
+</select>
+
+<label><b>Pickup Date</b></label>
+<input type="date" id="pickupDate"
+style="width:100%;padding:13px;margin:8px 0 18px;border-radius:8px;">
+
+<label><b>Pickup Time</b></label>
+<input type="time" id="pickupTime"
+style="width:100%;padding:13px;margin:8px 0 18px;border-radius:8px;">
+
+<label><b>Pickup Location</b></label>
+<input type="text" id="pickupLocation"
+placeholder="Enter pickup location"
+style="width:100%;padding:13px;margin:8px 0 18px;border-radius:8px;">
+
+<button type="button" onclick="sendBooking()"
+style="width:100%;padding:15px;background:#f5b400;color:#111;border:0;border-radius:8px;font-size:17px;font-weight:bold;">
+Confirm Booking
+</button>
+<input type="tel" id="mobile"
+placeholder="Enter 10-digit mobile number"
+maxlength="10"
+style="width:100%;padding:13px;margin:8px 0 18px;border-radius:8px;border:1px solid #ccc;">
+
+<label><b>Select Bike</b></label>
+<select id="bike"
+style="width:100%;padding:13px;margin:8px 0 18px;border-radius:8px;border:1px solid #ccc;">
+<option>Passion Pro</option>
+<option>Honda Shine</option>
+<option>Maestro Edge</option>
+<option>Classic 350</option>
+</select>
+
+<label><b>Pickup Date</b></label>
+<input type="date" id="pickupDate"
+style="width:100%;padding:13px;margin:8px 0 18px;border-radius:8px;border:1px solid #ccc;">
+
+<label><b>Pickup Time</b></label>
+<input type="time" id="pickupTime"
+style="width:100%;padding:13px;margin:8px 0 18px;border-radius:8px;border:1px solid #ccc;">
+
+<label><b>Pickup Location</b></label>
+    <button type="button"
+onclick="sendBooking()"
+style="width:100%;padding:15px;background:#f5b400;color:#111;border:0;border-radius:8px;font-size:17px;font-weight:bold;">
+Confirm Booking
+    </button>
+<input type="text" id="pickupLocation"
+placeholder="Enter pickup location"
+style="width:100%;padding:13px;margin:8px 0 20px;border-radius:8px;border:1px solid #ccc;">
+
+<button onclick="bookRide()"
+style="width:100%;padding:15px;background:#eab308;color:#111;border:0;border-radius:10px;font-size:17px;font-weight:bold;cursor:pointer;">
+Book Now
+</button>
+
+</div>
+<h2 style="text-align:center;margin-bottom:20px;">
+Book Your Ride
+</h2>
+
+<label><b>Select Bike</b></label>
+<select id="bike" style="width:100%;padding:13px;margin:8px 0 18px;border-radius:8px;">
+<option>Passion Pro</option>
+<option>Honda Shine</option>
+<option>Maestro Edge</option>
+<option>Classic 350</option>
+</select>
+
+<label><b>Pickup Date</b></label>
+<input type="date" id="pickupDate"
+style="width:100%;padding:13px;margin:8px 0 18px;border-radius:8px;">
+
+<label><b>Pickup Time</b></label>
+<input type="time" id="pickupTime"
+style="width:100%;padding:13px;margin:8px 0 18px;border-radius:8px;">
+
+<label><b>Pickup Location</b></label>
+<input type="text" id="pickupLocation"
+placeholder="Enter pickup location"
+style="width:100%;padding:13px;margin:8px 0 20px;border-radius:8px;">
+
+<button onclick="bookRide()"
+style="width:100%;padding:15px;background:#eab308;color:#111;border:0;border-radius:10px;font-size:17px;font-weight:bold;">
+Book Now
+</button>
+
+  </div>
 </section>
 
 <section class="section" id="places">
@@ -205,5 +329,62 @@ footer{background:#041018;color:#9eabb2;text-align:center;padding:18px;font-size
 </div>
 </section>
 <footer>© 2026 SBMS RIDES • Bike Rentals, Srisailam</footer>
-</body>
+<script>
+function bookRide(){
+
+    const bike = document.getElementById("bike").value;
+    const date = document.getElementById("pickupDate").value;
+    const time = document.getElementById("pickupTime").value;
+    const location = document.getElementById("pickupLocation").value;
+
+    if(!date || !time || !location){
+        alert("Please select date, pickup time and location.");
+        return;
+    }
+
+    alert(
+        "Booking Request\n\n" +
+        "Bike: " + bike +
+        "\nDate: " + date +
+        "\nPickup Time: " + time +
+        "\nLocation: " + location
+    );
+}
+</script>
+<script>
+function bookRide() {
+    const name = document.getElementById("customerName").value.trim();
+    const mobile = document.getElementById("mobile").value.trim();
+    const bike = document.getElementById("bike").value;
+    const date = document.getElementById("pickupDate").value;
+    const time = document.getElementById("pickupTime").value;
+    const location = document.getElementById("pickupLocation").value.trim();
+
+    if (!name || !mobile || !date || !time || !location) {
+        alert("Please fill in all booking details.");
+        return;
+    }
+
+    if (!/^[0-9]{10}$/.test(mobile)) {
+        alert("Please enter a valid 10-digit mobile number.");
+        return;
+    }
+
+    const message =
+        "🏍️ SBMS RIDES - NEW BOOKING%0A%0A" +
+        "👤 Customer: " + encodeURIComponent(name) + "%0A" +
+        "📱 Mobile: " + encodeURIComponent(mobile) + "%0A" +
+        "🏍️ Bike: " + encodeURIComponent(bike) + "%0A" +
+        "📅 Pickup Date: " + encodeURIComponent(date) + "%0A" +
+        "⏰ Pickup Time: " + encodeURIComponent(time) + "%0A" +
+        "📍 Pickup Location: " + encodeURIComponent(location);
+
+    const whatsappNumber = "917993534177";
+
+    window.open(
+        "https://wa.me/" + whatsappNumber + "?text=" + message,
+        "_blank"
+    );
+}
+</script></body>
 </html>
