@@ -248,12 +248,49 @@ style="width:100%;padding:13px;margin:8px 0 18px;border-radius:8px;border:1px so
 style="width:100%;padding:13px;margin:8px 0 18px;border-radius:8px;border:1px solid #ccc;">
 
 <label><b>Pickup Location</b></label>
-    <button type="button"
-onclick="sendBooking()"
-style="width:100%;padding:15px;background:#f5b400;color:#111;border:0;border-radius:8px;font-size:17px;font-weight:bold;">
-Confirm Booking
-    </button>
+<h2 style="text-align:center;margin-bottom:20px;">
+Book Your Ride
+</h2>
+
+<label><b>Customer Name</b></label>
+<input type="text" id="customerName"
+placeholder="Enter your name"
+style="width:100%;padding:13px;margin:8px 0 18px;border-radius:8px;">
+
+<label><b>Mobile Number</b></label>
+<input type="tel" id="mobile"
+placeholder="Enter 10-digit mobile number"
+maxlength="10"
+style="width:100%;padding:13px;margin:8px 0 18px;border-radius:8px;">
+
+<label><b>Select Bike</b></label>
+<select id="bike"
+style="width:100%;padding:13px;margin:8px 0 18px;border-radius:8px;">
+<option>Passion Pro</option>
+<option>Honda Shine</option>
+<option>Maestro Edge</option>
+<option>Classic 350</option>
+</select>
+
+<label><b>Pickup Date</b></label>
+<input type="date" id="pickupDate"
+style="width:100%;padding:13px;margin:8px 0 18px;border-radius:8px;">
+
+<label><b>Pickup Time</b></label>
+<input type="time" id="pickupTime"
+style="width:100%;padding:13px;margin:8px 0 18px;border-radius:8px;">
+
+<label><b>Pickup Location</b></label>
 <input type="text" id="pickupLocation"
+placeholder="Enter pickup location"
+style="width:100%;padding:13px;margin:8px 0 18px;border-radius:8px;">
+
+<button type="button" onclick="bookRide()"
+style="width:100%;padding:15px;background:#f5b900;color:#111;border:0;border-radius:8px;font-weight:bold;">
+Book Now
+</button>
+
+</div>
 placeholder="Enter pickup location"
 style="width:100%;padding:13px;margin:8px 0 20px;border-radius:8px;border:1px solid #ccc;">
 
@@ -263,9 +300,6 @@ Book Now
 </button>
 
 </div>
-<h2 style="text-align:center;margin-bottom:20px;">
-Book Your Ride
-</h2>
 
 <label><b>Select Bike</b></label>
 <select id="bike" style="width:100%;padding:13px;margin:8px 0 18px;border-radius:8px;">
