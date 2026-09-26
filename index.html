@@ -367,14 +367,14 @@ function bookRide() {
   }
 
   const message =
-    "🏍️ SBMS RIDES - NEW BOOKING%0A%0A" +
+    "🚲 SBMS RIDES - NEW BOOKING\n\n" +
     "👤 Customer: " + encodeURIComponent(name) + "%0A" +
     "📱 Mobile: " + encodeURIComponent(mobile) + "%0A" +
     "🏍️ Bike: " + encodeURIComponent(bike) + "%0A" +
     "📅 Pickup Date: " + encodeURIComponent(date) + "%0A" +
     "⏰ Pickup Time: " + encodeURIComponent(time) + "%0A" +
     "📍 Pickup Location: " + encodeURIComponent(location);
-
+window.open("https://wa.me/917995334177?text=" + message, "_blank");
   alert(
     "Booking Confirmed!\n\n" +
     "Customer: " + name + "\n" +
